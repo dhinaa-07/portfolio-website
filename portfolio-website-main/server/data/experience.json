@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Frontend Developer & Market Research Analyst",
+    "company": "ResQNow",
+    "description": "Contributed to the development of the ResQNow roadside assistance platform. Designed and developed responsive user interfaces using modern web technologies to enhance user experience and accessibility. Conducted market research and competitor analysis to identify customer needs, industry trends, and business opportunities. Gathered and analyzed user feedback to recommend product improvements. Collaborated with the development team to define user workflows, UI/UX requirements, and frontend implementation strategies. Assisted in planning product features and customer-focused solutions. Supported product growth initiatives through data-driven decision-making."
+  },
+  {
+    "title": "PyExpo Hackathon Winner",
+    "company": "PyExpo",
+    "description": "Winner (Awarded ₹10,000 prize). Developed a weather application and an agri chatbot designed to assist local farmers during the hackathon."
+  },
+  {
+    "title": "Science Expo Participant",
+    "company": "Science Expo",
+    "description": "Engineered a driving safety device that emits a loud sound to alert drivers if their eyes close, preventing potential accidents."
+  }
+]
