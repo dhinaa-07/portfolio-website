@@ -4,7 +4,6 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CustomCursor from './components/CustomCursor';
-import BookOpening from './components/BookOpening';
 import ChatAssistant from './components/ChatAssistant';
 import { getPageIndex } from './config/book';
 
@@ -137,36 +136,29 @@ function AnimatedRoutes() {
 }
 
 function AppShell() {
-  const [bookReady, setBookReady] = useState(false);
-  const handleBookOpen = useCallback(() => setBookReady(true), []);
   const [isChatOpen, setIsChatOpen] = useState(false);
 
   return (
-    <>
-      <BookOpening onComplete={handleBookOpen} />
-      {bookReady && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-          className="relative w-full flex flex-col min-h-full book-app-shell"
-        >
-          <CustomCursor />
-          <Navbar />
-          <main className="relative z-10 flex-1 book-main">
-            <AnimatedRoutes />
-          </main>
-          <Footer />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+      className="relative w-full flex flex-col min-h-full book-app-shell"
+    >
+      <CustomCursor />
+      <Navbar />
+      <main className="relative z-10 flex-1 book-main">
+        <AnimatedRoutes />
+      </main>
+      <Footer />
 
-          {/* Dhina AI Chat Assistant (book-themed) */}
-          <ChatAssistant
-            theme="dark"
-            isOpenExternal={isChatOpen}
-            setIsOpenExternal={setIsChatOpen}
-          />
-        </motion.div>
-      )}
-    </>
+      {/* Dhina AI Chat Assistant (book-themed) */}
+      <ChatAssistant
+        theme="dark"
+        isOpenExternal={isChatOpen}
+        setIsOpenExternal={setIsChatOpen}
+      />
+    </motion.div>
   );
 }
 
